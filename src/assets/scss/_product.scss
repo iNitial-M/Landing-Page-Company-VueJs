@@ -1,0 +1,68 @@
+/*
+// 9. Pricing
+*/
+
+.product-box {
+  background: $white;
+  box-shadow: $box-shadow;
+  margin-bottom: 30px;
+  min-height: 650px;
+  position: relative;
+  overflow: hidden;
+  .product-icon-bg {
+    background: rgba($primary, 0.12);
+    color: $primary;
+    display: block;
+    height: 80px;
+    width: 80px;
+    line-height: 100px;
+    margin: 0 auto;
+    border-radius: 20% 20% 4% 20% / 20% 20% 4% 20%;
+    box-shadow: 0 0 0 7px rgba($primary, 0.03);
+    transition: all 0.5s;
+  }
+  .product-item {
+    li {
+      padding: 10px 0;
+    }
+  }
+  .product-btn {
+    position: relative;
+    z-index: 1;
+  }
+  &:hover, &.active {
+    .product-icon-bg {
+      background-color: $primary;
+      box-shadow: 0 0 0 7px rgba($primary, 0.06);
+      color: $white;
+      border-radius: 4% 20% 20% 20% / 4% 20% 20% 20%;
+    }
+  }
+}
+
+.product-box .row .product-btn {
+  position: absolute;
+  bottom: 60px;
+}
+
+.product-box .row .img-product{
+  min-height: 260px;
+}
+
+.product-box .row .img-product img{
+  flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 200px) and (max-width: 768px){
+  .product-box {
+    min-height: 150px !important;
+  }
+  .product-box .row .img-product{
+    min-height: 100px !important;
+  }
+  .product-box .row .product-btn {
+    position: absolute;
+    bottom: 15px;
+  }
+}

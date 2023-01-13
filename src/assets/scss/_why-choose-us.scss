@@ -1,0 +1,95 @@
+/* 
+// 7. Why Choose Us
+*/
+
+.wc-box {
+    box-shadow: $box-shadow;
+    height: 350px;
+    margin-bottom: 30px;
+    .wc-box-icon {
+        font-size: 30px;
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+    &:hover {
+        transform: translateY(-6px);
+        .wc-box-icon {
+            background: rgba($white, 0.12) !important;
+            color: $white !important;
+            box-shadow: 0 0 0 7px rgba($white, 0.04);
+        }
+        .wc-title {
+            color: $white;
+        }
+        .wc-subtitle {
+            color: rgba($white, 0.5) !important;
+        }
+
+    }
+}
+.wc-box, .wc-box-icon, .wc-title, .wc-subtitle {
+    transition: all 0.5s;
+}
+
+/*
+// 9. Pricing
+*/
+
+.why-box {
+    background: $white;
+    box-shadow: $box-shadow;
+    margin-bottom: 30px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    .why-icon-bg {
+        background: rgba($primary, 0.12);
+        color: $primary;
+        display: block;
+        height: 80px;
+        width: 80px;
+        line-height: 100px;
+        margin: 0 auto;
+        border-radius: 20% 20% 4% 20% / 20% 20% 4% 20%;
+        box-shadow: 0 0 0 7px rgba($primary, 0.03);
+        transition: all 0.5s;
+    }
+    .why-item {
+        li {
+            padding: 10px 0;
+        }
+    }
+    .why-btn {
+        position: relative;
+        z-index: 1;
+    }
+    &:hover, &.active {
+        .why-icon-bg {
+            background-color: $primary;
+            box-shadow: 0 0 0 7px rgba($primary, 0.06);
+            color: $white;
+            border-radius: 4% 20% 20% 20% / 4% 20% 20% 20%;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .wc-box {
+        &.wc-box-#{$color} {
+            .wc-box-icon {
+                background: rgba($value, 0.12);
+                color: #{$value};
+                border: #4c5667;
+            }
+            &:hover {
+                background: #{$value};
+                box-shadow: 0 5px 18px rgba($value, 0.4);
+            }
+        }
+
+    }
+}
